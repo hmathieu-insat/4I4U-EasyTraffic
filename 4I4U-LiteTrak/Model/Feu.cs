@@ -2,13 +2,13 @@
 
 namespace _4I4U_LiteTrak.Model
 {
+
     public class Feu
     {
+        public int Id { get; set; }
         public int InfoTraffic { get; set; }
-        private int TempsAjout { get; set; }
-        private bool DoitClignoter { get; set; }
-        private List<Feu> FeuxAval { get; set; } = new();
-
-
+        public int TempsAjout { get; set; }
+        public bool DoitClignoter { get; set; }
+        public virtual List<Feu>? FeuxAval { get; set; }
     }
 }
