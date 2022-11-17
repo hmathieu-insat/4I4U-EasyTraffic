@@ -35,7 +35,7 @@ namespace _4I4U_LiteTrak.Services
                     count++;
                 }
             }
-            return count + 3;
+            return count * 3;
         }
 
 
