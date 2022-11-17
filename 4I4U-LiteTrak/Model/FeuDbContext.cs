@@ -12,8 +12,11 @@ namespace _4I4U_LiteTrak.Model
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
+            Console.WriteLine(path);
 
             DbPath = DbPath = System.IO.Path.Join(path, "feus.db");
+
+
         }
 
         // The following configures EF to create a Sqlite database file in the

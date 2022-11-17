@@ -1,3 +1,4 @@
+using _4I4U_LiteTrak;
 using _4I4U_LiteTrak.Model;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add the Db Context
 var db = new FeuDbContext();
-builder.Services.AddDbContext<FeuDbContext>();
+builder.Services
+    .AddDbContext<FeuDbContext>()
+    .AddTransient<DataSeeder>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

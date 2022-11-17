@@ -9,6 +9,6 @@ namespace _4I4U_LiteTrak.Model
         public int InfoTraffic { get; set; }
         public int TempsAjout { get; set; }
         public bool DoitClignoter { get; set; }
-        public List<Feu> FeuxAval { get; set; } = new();
+        public virtual List<Feu>? FeuxAval { get; set; }
     }
 }
