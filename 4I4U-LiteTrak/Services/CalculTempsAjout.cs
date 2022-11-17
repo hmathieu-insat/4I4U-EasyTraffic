@@ -6,41 +6,39 @@ namespace _4I4U_LiteTrak.Services
 {
     public class CalculerTempsAjout
     {
-        public List<Feu> listeFeux { get; }
-        public CalculerTempsAjout(List<Feu> liste)
+        private readonly List<Feu> listeFeux;
+        public CalculerTempsAjout(List<Feu> feux)
         {
-            listeFeux = liste;
+            listeFeux = feux;
         }
-        public List<int> recupererInfoTraffic(List<Feu> Feux)
+
+        public List<int> RecupererInfoTraffic()
         {
             List<int> ListInfoTraffic = new();
-            foreach (Feu Feu in Feux)
+            foreach (Feu Feu in listeFeux)
             {
                 ListInfoTraffic.Add(Feu.InfoTraffic);
 
             }
             return ListInfoTraffic;
         }
-    public int CalculTempsAjout()
-    {
-        public int count = 0;
-        public int TempsAjout;
-            List<int> ListInfoTraffic = recupererInfoTraffic(listeFeux);
-            foreach public List<Feu> Feux { get; private set; }
 
+        public int CalculTempsAjout()
+        {
+            int count = 0;
+            List<int> ListInfoTraffic = RecupererInfoTraffic();
 
-        (value in ListInfoTraffic) {
-                if (ListInfoTraffic(value)) {
-                    count ++;
+            foreach (var value in ListInfoTraffic)
+            {
+                if (value > 3)
+                {
+                    count++;
                 }
             }
-            case 1 :
-                if (count = 1)
-                {
-                    
-                }
-
+            return count + 3;
         }
+
+
 
     }
 }
